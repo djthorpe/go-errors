@@ -17,8 +17,9 @@ const (
 	ErrUnexpectedResponse
 	ErrNotFound
 	ErrNotModified
-	ErrInternalAppError
 	ErrNotImplemented
+	ErrInternalAppError
+	ErrChannelBlocked
 	ErrOutOfOrder
 )
 
@@ -43,6 +44,8 @@ func (e Error) Error() string {
 		return "ErrInternalAppError"
 	case ErrNotImplemented:
 		return "ErrNotImplemented"
+	case ErrChannelBlocked:
+		return "ErrChannelBlocked"
 	case ErrOutOfOrder:
 		return "ErrOutOfOrder"
 	default:
