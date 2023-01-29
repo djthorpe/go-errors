@@ -18,6 +18,8 @@ const (
 	ErrNotFound
 	ErrNotModified
 	ErrNotImplemented
+	ErrNotAuthorized
+	ErrExpired
 	ErrInternalAppError
 	ErrChannelBlocked
 	ErrOutOfOrder
@@ -40,10 +42,14 @@ func (e Error) Error() string {
 		return "ErrNotFound"
 	case ErrNotModified:
 		return "ErrNotModified"
-	case ErrInternalAppError:
-		return "ErrInternalAppError"
 	case ErrNotImplemented:
 		return "ErrNotImplemented"
+	case ErrNotAuthorized:
+		return "ErrNotAuthorized"
+	case ErrExpired:
+		return "ErrExpired"
+	case ErrInternalAppError:
+		return "ErrInternalAppError"
 	case ErrChannelBlocked:
 		return "ErrChannelBlocked"
 	case ErrOutOfOrder:
